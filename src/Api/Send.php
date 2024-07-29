@@ -20,14 +20,14 @@ use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\SerializerInterface;
 
-final readonly class Send
+final class Send
 {
     private SerializerInterface $serializer;
 
     public function __construct(
-        private string $oauthToken,
-        private string $projectId,
-        private Psr18Client $client
+        private readonly string $oauthToken,
+        private readonly string $projectId,
+        private readonly Psr18Client $client
     ) {
         $classMetadataFactory = new ClassMetadataFactory(new AttributeLoader());
         $metadataAwareNameConverter = new MetadataAwareNameConverter($classMetadataFactory, new CamelCaseToSnakeCaseNameConverter());

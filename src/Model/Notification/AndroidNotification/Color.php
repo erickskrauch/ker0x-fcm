@@ -7,13 +7,13 @@ namespace Kerox\Fcm\Model\Notification\AndroidNotification;
 /**
  * @see https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#Color
  */
-final readonly class Color
+final class Color
 {
     public function __construct(
-        public float $red,
-        public float $green,
-        public float $blue,
-        public float $alpha
+        public readonly float $red,
+        public readonly float $green,
+        public readonly float $blue,
+        public readonly float $alpha
     ) {
     }
 }

@@ -11,24 +11,24 @@ use Symfony\Component\Serializer\Annotation\SerializedName;
 /**
  * @see https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification
  */
-final readonly class ApnsNotification
+final class ApnsNotification
 {
     public function __construct(
-        public ?Alert $alert = null,
-        public int $badge = 0,
-        public string|Sound|null $sound = null,
-        #[SerializedName('thread-id')] public ?string $threadId = null,
-        public ?string $category = null,
-        #[SerializedName('content-available')] public int $contentAvailable = 0,
-        #[SerializedName('mutable-content')] public int $mutableContent = 0,
-        #[SerializedName('target-content-id')] public ?string $targetContentId = null,
-        #[SerializedName('interruption-level')] public ?string $interruptionLevel = null,
-        #[SerializedName('relevance-score')] public float $relevanceScore = 0,
-        #[SerializedName('filter-criteria')] public ?string $filterCriteria = null,
-        #[SerializedName('stale-date')] public ?int $staleDate = null,
-        #[SerializedName('content-state')] public ?string $contentState = null,
-        public ?int $timestamp = null,
-        public ?string $events = null,
+        public readonly ?Alert $alert = null,
+        public readonly int $badge = 0,
+        public readonly string|Sound|null $sound = null,
+        #[SerializedName('thread-id')] public readonly ?string $threadId = null,
+        public readonly ?string $category = null,
+        #[SerializedName('content-available')] public readonly int $contentAvailable = 0,
+        #[SerializedName('mutable-content')] public readonly int $mutableContent = 0,
+        #[SerializedName('target-content-id')] public readonly ?string $targetContentId = null,
+        #[SerializedName('interruption-level')] public readonly ?string $interruptionLevel = null,
+        #[SerializedName('relevance-score')] public readonly float $relevanceScore = 0,
+        #[SerializedName('filter-criteria')] public readonly ?string $filterCriteria = null,
+        #[SerializedName('stale-date')] public readonly ?int $staleDate = null,
+        #[SerializedName('content-state')] public readonly ?string $contentState = null,
+        public readonly ?int $timestamp = null,
+        public readonly ?string $events = null,
     ) {
     }
 }

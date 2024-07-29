@@ -7,12 +7,12 @@ namespace Kerox\Fcm\Model\Notification\AndroidNotification;
 /**
  * @see https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#lightsettings
  */
-final readonly class LightSettings
+final  class LightSettings
 {
     public function __construct(
-        public Color $color,
-        public string $lightOnDuration,
-        public string $lightOffDuration
+        public readonly Color $color,
+        public readonly string $lightOnDuration,
+        public readonly string $lightOffDuration
     ) {
     }
 }

@@ -11,20 +11,20 @@ use Kerox\Fcm\Model\Option\AndroidFcmOptions;
 /**
  * @see https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#androidconfig
  */
-final readonly class AndroidConfig
+final class AndroidConfig
 {
     /**
      * @param array<string, string> $data
      */
     public function __construct(
-        public ?string $collapseKey = null,
-        public ?AndroidMessagePriority $priority = null,
-        public ?string $ttl = null,
-        public ?string $restrictedPackageName = null,
-        public array $data = [],
-        public ?AndroidNotification $notification = null,
-        public ?AndroidFcmOptions $fcmOptions = null,
-        public bool $directBootOk = false,
+        public readonly ?string $collapseKey = null,
+        public readonly ?AndroidMessagePriority $priority = null,
+        public readonly ?string $ttl = null,
+        public readonly ?string $restrictedPackageName = null,
+        public readonly array $data = [],
+        public readonly ?AndroidNotification $notification = null,
+        public readonly ?AndroidFcmOptions $fcmOptions = null,
+        public readonly bool $directBootOk = false,
     ) {
     }
 }

@@ -7,11 +7,11 @@ namespace Kerox\Fcm\Model\Option;
 /**
  * @see https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages?hl=fr#apnsfcmoptions
  */
-final readonly class ApnsFcmOptions
+final class ApnsFcmOptions
 {
     public function __construct(
-        public ?string $analyticsLabel = null,
-        public ?string $image = null,
+        public readonly ?string $analyticsLabel = null,
+        public readonly ?string $image = null,
     ) {
     }
 }

@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Kerox\Fcm\Model\Target;
 
-final readonly class Condition implements \Stringable
+final class Condition implements \Stringable
 {
     private const PRE_SEPARATOR = '(';
     private const POST_SEPARATOR = ')';
 
-    private function __construct(private string $condition)
+    private function __construct(private readonly string $condition)
     {
     }
 

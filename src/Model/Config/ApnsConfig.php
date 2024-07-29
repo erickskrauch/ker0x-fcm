@@ -10,7 +10,7 @@ use Kerox\Fcm\Model\Option\ApnsFcmOptions;
 /**
  * @see https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#apnsconfig
  */
-final readonly class ApnsConfig
+final class ApnsConfig
 {
     public ?object $payload;
 
@@ -19,8 +19,8 @@ final readonly class ApnsConfig
      */
     public function __construct(
         ?ApnsNotification $notification = null,
-        public array $headers = [],
-        public ?ApnsFcmOptions $fcmOptions = null,
+        public readonly array $headers = [],
+        public readonly ?ApnsFcmOptions $fcmOptions = null,
     ) {
         $this->payload = null !== $notification
             ? new class($notification) {
