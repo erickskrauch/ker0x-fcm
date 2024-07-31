@@ -19,8 +19,8 @@ final class AndroidNotification
      * @param string[] $vibrateTimings
      */
     public function __construct(
-        public readonly string $title,
-        public readonly string $body,
+        public readonly ?string $title = null,
+        public readonly ?string $body = null,
         public readonly ?string $icon = null,
         public readonly ?string $color = null,
         public readonly ?string $sound = null,
