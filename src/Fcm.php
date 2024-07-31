@@ -12,13 +12,11 @@ final class Fcm
     final public const API_URL = 'https://fcm.googleapis.com';
     final public const API_VERSION = 'v1';
 
-    private Psr18Client $client;
-
     public function __construct(
         private readonly string $oauthToken,
         private readonly string $projectId,
+        private readonly Psr18Client $client = new Psr18Client(),
     ) {
-        $this->client = new Psr18Client();
     }
 
     public function send(): Send
