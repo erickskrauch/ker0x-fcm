@@ -24,11 +24,11 @@ final class Message
     public ?string $condition = null;
 
     /**
-     * @param array<string, string> $data
+     * @param array<string, mixed>|null $data
      */
     public function __construct(
         Token|Topic|Condition $target,
-        public array $data = [],
+        public ?array $data = null,
         Notification|string|null $notification = null,
         public ?AndroidConfig $android = null,
         public ?WebpushConfig $webpush = null,

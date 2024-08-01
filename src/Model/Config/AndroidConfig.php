@@ -14,14 +14,14 @@ use Kerox\Fcm\Model\Option\AndroidFcmOptions;
 final class AndroidConfig
 {
     /**
-     * @param array<string, string> $data
+     * @param array<string, mixed>|null $data
      */
     public function __construct(
         public readonly ?string $collapseKey = null,
         public readonly ?AndroidMessagePriority $priority = null,
         public readonly ?string $ttl = null,
         public readonly ?string $restrictedPackageName = null,
-        public readonly array $data = [],
+        public readonly ?array $data = null,
         public readonly ?AndroidNotification $notification = null,
         public readonly ?AndroidFcmOptions $fcmOptions = null,
         public readonly bool $directBootOk = false,

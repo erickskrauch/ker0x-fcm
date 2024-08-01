@@ -13,12 +13,12 @@ use Kerox\Fcm\Model\Option\WebpushFcmOptions;
 final class WebpushConfig
 {
     /**
-     * @param array<string, string> $headers
-     * @param array<string, string> $data
+     * @param array<string, string>|null $headers
+     * @param array<string, mixed>|null $data
      */
     public function __construct(
-        public readonly array $headers = [],
-        public readonly array $data = [],
+        public readonly ?array $headers = null,
+        public readonly ?array $data = null,
         public readonly ?WebpushNotification $notification = null,
         public readonly ?WebpushFcmOptions $fcmOptions = null,
     ) {

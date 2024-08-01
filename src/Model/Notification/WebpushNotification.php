@@ -14,7 +14,7 @@ final class WebpushNotification
 {
     /**
      * @param array<int, array{action: string, title: string, icon: string}> $actions
-     * @param array<string, mixed>                                           $data
+     * @param array<string, mixed>|null                                      $data
      * @param int[]                                                          $vibrate
      */
     public function __construct(
@@ -23,7 +23,7 @@ final class WebpushNotification
         public array $actions = [],
         public ?string $badge = null,
         public ?string $body = null,
-        public array $data = [],
+        public ?array $data = null,
         public Direction $direction = Direction::Auto,
         public ?string $lang = null,
         public ?string $tag = null,
